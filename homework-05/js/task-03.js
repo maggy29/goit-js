@@ -1,4 +1,4 @@
-class Storage {
+﻿class Storage {
     constructor(items) {
         this.items = items;
     }
