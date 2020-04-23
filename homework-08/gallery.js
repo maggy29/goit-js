@@ -15,9 +15,6 @@ const refs = {
 refs.gallery.addEventListener('click', handleImageClick);
 refs.modalButton.addEventListener('click', handleClose);
 refs.modalContent.addEventListener('click', handleOverlay);
-refs.modalNext.addEventListener('click', handleNext);
-// refs.modalPrev.addEventListener('click', handlePrev);
-
 
 function handleImageClick(event) {
     event.preventDefault();
@@ -47,12 +44,6 @@ function handleKeyPress(event) {
     }
     handleClose();
 };
-
-function handleNext(event) {
-    for (let i = 0; i < images.length; i += 1) {
-        refs.modalImage.src[i] = refs.modalImage.src[i + 1];
-    }
-}
 
 const markup = images.map(image =>
     `<li
